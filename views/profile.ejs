@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavishya Projects</title>
+    <link rel="stylesheet" href="../profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+
+
+    <div class="main">
+
+        <div class="btns">
+            <a id="create" href="/create">Create</a>
+            <a id="create" href="/logout">logout</a>
+        </div>
+      
+
+        <% for( numb of k.posts) { %>
+            <div class="abo">
+            <p>Name of the property = <%= numb.name1 %> </p>           
+            <p>Description = <%= numb.description %></p>
+             <p>Video Url = <%= numb.video %> </p>
+             <p>Map Url = <%= numb.mapurl %></p>
+
+             <% for(img of numb.imgurl) { %>
+                <div class="bb">
+                    <p id="pa">Image Links =  <%= img %></p>
+                </div>
+             <% } %>
+
+            
+
+
+
+             <div class="btns">
+                <form action="/delete/<%=numb._id%>" method="post">
+                    <button id="create">Delete</button>
+                </form>
+    
+                <form action="/see/<%=numb._id%>" method="get">
+                  <button id="create">See</button>
+                </form>
+             </div>
+           
+
+        </div>
+
+
+        <% } %>
+
+    </div>
+
+
+
+</body>
+</html>
