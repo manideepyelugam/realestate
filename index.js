@@ -2,6 +2,8 @@ if(process.env.NODE_ENV != "production"){
   require("dotenv").config();
 
 }
+const bodyParser = require('body-parser');
+
 const express = require("express")
 const mongoose = require("mongoose")
 const app = express()
@@ -28,6 +30,8 @@ app.options("",cors(corsConfig));
 app.use(cors(corsConfig));
 
 
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 
 const dburl = process.env.MONGO 
