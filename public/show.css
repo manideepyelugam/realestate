@@ -201,6 +201,18 @@
 }
 
 
+.one{
+    height: 84vh;
+    width: 100%;
+    display: flex;   
+
+}
+
+
+.left{
+    margin-bottom: 40px;
+}
+
 }
 
 
@@ -278,9 +290,14 @@
 }
 
 
-.two h1{
+.two #name{
     font-size: 80px;
     font-weight: 600;
+    white-space: normal;
+    word-wrap: break-word; /* or word-break: break-all; */
+    overflow-wrap: break-word;
+    line-height: 100px;
+    text-align: center;
 }
 
 
@@ -341,6 +358,9 @@
         width: 450px;
     }
 
+   .two #name{
+        font-size: 40px;
+    }
 
 #address{
     font-size: 33px;
@@ -370,6 +390,9 @@
         font-size: 18px;
     }
 
+    .two #name{
+        font-size: 28px;
+    }
 #address{
     font-size: 28px;
     margin-bottom: 6px;
