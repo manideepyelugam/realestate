@@ -18,6 +18,14 @@ const {storage} = require("./cloudconfig")
 const upload = multer({storage})
 const {cloudinary} = require("./cloudconfig");
 const MongoStore = require("connect-mongo");
+const cors = require("cors");
+const corsConfig = {
+  origin : "*",
+  credential :true,
+  methods: ["GET","POST","PUT","DELETE"]
+}
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
 
 
 
